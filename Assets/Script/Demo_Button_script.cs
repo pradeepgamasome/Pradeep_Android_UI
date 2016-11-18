@@ -4,17 +4,19 @@ using System.Collections;
 using UnityEngine.UI;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
+using System.Data;
+using Mono.Data.SqliteClient;
 
 public class Demo_Button_script  : MonoBehaviour {
-
-	//public List<string> String_one;
 	public List<string> StoredData;
 	public List<string> Button_Text;
-
 
 	public List<GameObject> Button_Obj;
 	public GameObject parent_content;
 	public GameObject button;
+	//public GameObject ScrollContent;
+	public GameObject ScreenContent;
+
 
 
 	public int space;
@@ -24,6 +26,16 @@ public class Demo_Button_script  : MonoBehaviour {
 
 	//Button b = new Button[no_button];
 	void Start () {
+		//new for the instanciate 
+
+
+		//old;
+		RectTransform parent1 = ScreenContent.GetComponent<RectTransform> ();
+		RectTransform parent = parent_content.GetComponent<RectTransform> ();
+		GridLayoutGroup gridScroll = parent_content.GetComponent<GridLayoutGroup> ();
+		gridScroll.cellSize = new Vector2 ((parent1.rect.width)-15,(parent.rect.height/6));
+
+
 
 		parent_content.GetComponent<RectTransform> ().sizeDelta=new Vector2(10,space*no_button);
 

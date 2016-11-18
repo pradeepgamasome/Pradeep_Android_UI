@@ -67,7 +67,7 @@ public class Demo_Button_script2  : MonoBehaviour {
 	{
 		//print ("button click : "+i);
 		//print ("Hello this is Button Vluae " + Button_Text [i]);
-		Application.LoadLevel ("Pop_upSceen");
+		//Application.LoadLevel ("Pop_upSceen");
 		//print(PlayerPrefs.GetFloat("Data"));
 
 	switch (i) {
